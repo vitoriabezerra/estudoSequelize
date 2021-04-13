@@ -63,9 +63,16 @@ const { Op } = require('sequelize');
 //     }
 // )
 
-Post.findByPk(1, {include: ['comentarios']}).then(
-    comentario =>{
-        console.log(comentario.toJSON());
+// Post.findByPk(1, {include: ['comentarios']}).then(
+//     comentario =>{
+//         console.log(comentario.toJSON());
+//         sequelize.close();
+//     }
+// )
+
+Post.findByPk(1, {include: ['curtiu']}).then(
+    post =>{
+        console.log(post.toJSON());
         sequelize.close();
     }
 )
